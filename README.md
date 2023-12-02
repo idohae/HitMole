@@ -1,9 +1,11 @@
 # 🐒__HitMole__🙉
 
 ## **⋆ . 🎁˚🎄 ✦Game Developers.. 🧸⊹ ･ﾟ✧**
->  - 이해정(Haejeong, Lee) <pouwuoq0815@pukyong.ac.kr>
->  - 백서연
->  - 주효빈
+> 이해정(Haejeong, Lee) <pouwuoq0815@pukyong.ac.kr>
+> 
+> 백서연
+> 
+> 주효빈
 
 ---
 ## 1. game rule
