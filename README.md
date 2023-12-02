@@ -12,11 +12,17 @@
 > ### main game
 >  >* 두더지의 행동거지
 >  >
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/be75f801-9c0a-4526-bda0-34844adc66f7" width="20%" height="20%" alt="round1_0 8"></img>
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/c7936090-0b0d-4a24-8c13-4ee9020d5bbe" width="20%" height="20%" alt="round2_0 6"></img>
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/485d173c-1805-4254-9f22-683875e1dfcf" width="20%" height="20%" alt="round3_0 4"></img>
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/c60f80da-2936-4c55-ba55-3b951220b244" width="20%" height="20%" alt="round4_0 2"></img>
+>  >    
 >  >    round는 총 4개로, 1라운드에선 두더지가 0.8초만에 들어가고, 각각 라운드 마다 머무는 시간이 0.2초씩 빨라진다.
 >  >
 >  >    두더지가 나오지 않은 구멍을 때리면 두더지가 바로 숨어버린다.
 >  >
 >  >    그외에 잘못된 키를 누르면 1라운드에선 0.3초 더 기다려주며, 그 뒤로는 0.05초씩 줄어든다.
+>  >  
 >  >* 점수
 >  >
 >  >    정상적으로 두더지를 잡으면 10점
