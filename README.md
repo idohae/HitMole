@@ -59,7 +59,7 @@
 >  >  >
 >  >  >    hitmole_boards 모듈을 이용하여 튜토리얼부터 끝까지 전반적인 진행 코드가 작성된 파일이다.
 >  >
->  >* main.py
+>  >* [main.py](#main)
 >  >
 >  >    게임의 시작과 함께 플레이어로부터 닉네임을 입력받고, hitmole2.py 의 게임 진행 메소드 play 를 호출한다.
 
@@ -83,3 +83,5 @@
 > ### hitmole_boards
 >
 > ### hitmole2
+>
+> ### main
