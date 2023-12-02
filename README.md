@@ -12,10 +12,10 @@
 > ### main game
 >  >* 두더지의 행동거지
 >  >
->  >    <img src="https://github.com/idohae/HitMole/assets/152246147/be75f801-9c0a-4526-bda0-34844adc66f7" width="20%" height="20%" alt="round1_0 8"></img>
->  >    <img src="https://github.com/idohae/HitMole/assets/152246147/c7936090-0b0d-4a24-8c13-4ee9020d5bbe" width="20%" height="20%" alt="round2_0 6"></img>
->  >    <img src="https://github.com/idohae/HitMole/assets/152246147/485d173c-1805-4254-9f22-683875e1dfcf" width="20%" height="20%" alt="round3_0 4"></img>
->  >    <img src="https://github.com/idohae/HitMole/assets/152246147/c60f80da-2936-4c55-ba55-3b951220b244" width="20%" height="20%" alt="round4_0 2"></img>
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/16bc9880-c75c-4180-ba40-d7b3a92b24b4" width="20%" height="20%" alt="round1"></img>
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/3419f68e-5666-4f60-876a-522565c22bcb" width="20%" height="20%" alt="round2"></img>
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/b0ef3959-e0d1-4e79-a066-65a9439f672c" width="20%" height="20%" alt="round3"></img>
+>  >    <img src="https://github.com/idohae/HitMole/assets/152246147/b8b1c1ce-f1e1-45fe-890d-7cffb34c8362" width="20%" height="20%" alt="round4"></img>
 >  >    
 >  >    round는 총 4개로, 1라운드에선 두더지가 0.8초만에 들어가고, 각각 라운드 마다 머무는 시간이 0.2초씩 빨라진다.
 >  >
@@ -31,7 +31,7 @@
 >  >* 라운드 진행
 >  >    1,2 round에서는 각 라운드에서의 결과와 관계없이 만점의 80% 이상을 획득해야 다음 라운드로 넘어간다.
 >  >
->  >        ex) 1라운드: 총점 80점 이상, 2라운드: 총점 160점 이상
+>  >    **ex) 1라운드: 총점 80점 이상, 2라운드: 총점 160점 이상**
 >  >
 >  >    4라운드는 히든 라운드로 3라운드에서 모두 다 맞추면 4라운드로 넘어갈 수 있다.
 
