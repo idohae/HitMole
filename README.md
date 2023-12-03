@@ -75,7 +75,10 @@
 > [`tutorial_board`](#tutorial_board)
 > [`start_board`](#start_board)
 > [`print_board`](#print_boardpop)
-> [`hit_board`](#hit_boardpop)  
+> [`hit_board`](#hit_boardpop)
+> [`score_board`](#score_boardpoints)
+> [`round_board`](#round_boardround)
+> [`over_board`](#over_board)  
 > ```python
 > if os.name == "nt":
 >     eraser = "cls"
