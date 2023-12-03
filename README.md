@@ -50,7 +50,7 @@
 >  >  > [`hitmole2.py`](#2hitmole2)   
 >  >  >    hitmole_boards 모듈을 이용하여 튜토리얼부터 끝까지 전반적인 진행 코드가 작성된 파일이다.
 >  >
->  > [`main.py`](#main)   
+>  > [`main.py`](#3main)   
 >  >    게임의 시작과 함께 플레이어로부터 닉네임을 입력받고, hitmole2.py 의 게임 진행 메소드 [`play()`](#playselfuser) 를 호출한다.
 
 > ### how to start
@@ -445,7 +445,7 @@
 >  > → 게임 보드 출력, 현재 라운드 번호(`self.cnt_round`)에 해당하는 화면을 출력 → 현재 플레이어의 점수를 랭킹에 내림차순 저장
 >
 > 
-> ## `main`[▲](#whats-in-my-hitmole)
+> ## 3)`main`[▲](#whats-in-my-hitmole)
 > ```python
 > from hitmole_pkg.hitmole2 import *
 > import hitmole_pkg.hitmole_boards as boards
