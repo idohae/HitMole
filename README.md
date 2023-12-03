@@ -85,20 +85,21 @@
 ---
 ## 3. codes
 `tutorial` → `1라운드` → `점수출력` → `판별` → `2라운드` → `점수` → `3라운드` → `점수` → `랭킹출력`
-> ### hitmole_boards
+> ## hitmole_boards[▲](#hitmole_pkg)
 > 
->  > ```python
->  > if os.name == "nt":
->  >     eraser = "cls"
->  > elif os.name == "posix":
->  >     eraser = "clear"
->  > ```
->  > 
->  > 게임을 실행하는 os 가 Mac 또는 Linux 일 경우 아래에서 쓰이는 os.system() 함수에 넘겨주는 명령어를 `clear`로, Window 일 경우 `cls`로 한다.
->  > 
->  > 보드판을 반복해서 출력하기 위해 터미널 화면을 초기화 하는 데 사용된다.
->  > 
->  > ### hitmole board
+> ```python
+> if os.name == "nt":
+>     eraser = "cls"
+> elif os.name == "posix":
+>     eraser = "clear"
+> ```
+> 
+> 게임을 실행하는 os 가 Mac 또는 Linux 일 경우 아래에서 쓰이는 os.system() 함수에 넘겨주는 명령어를 `clear`로, Window 일 경우 `cls`로 한다.
+> 
+> 보드판을 반복해서 출력하기 위해 터미널 화면을 초기화 하는 데 사용된다.
+> 
+>  > ### hitmole_board()
+>  > 게임 시작 화면 출력 메소드
 >  >
 >  > ```python
 >  > hitmole_board():
@@ -114,7 +115,8 @@
 >  > 
 >  > 다음 화면으로 넘어가기 전 공백을 위한 print를 0.5초 유지
 >
->  > ### tutorial board
+>  > ### tutorial_board()
+>  > 튜토리얼 시작 화면 출력 메소드
 >  >
 >  > ```python
 >  > tutorial_board(): 
@@ -123,9 +125,10 @@
 >  >     ...
 >  > ```
 >  >
->  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [hitmole_board()](#hitmole-board) 와 동일
+>  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [hitmole_board()](#hitmole_board) 와 동일
 >
->  > ### start board
+>  > ### start_board()
+>  > 본 게임 시작 화면 출력 메소드
 >  >
 >  > ```python
 >  > start_board():
@@ -150,9 +153,10 @@
 >  > → `NUMS` 리스트에서 해당 인덱스 범위의 숫자를 출력하기 위해 반복 루프(5번인 이유는 리스트에서 숫자 하나가 5열로 구성)
 >  > 
 >  > → 숫자 출력 후 화면 정리를 위한 엔터 출력
->  > 
+>  >
+>  > ### print_board()
 >
 >  > #### 
-> ### hitmole2
+> ## hitmole2
 >
-> ### main
+> ## main
