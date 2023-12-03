@@ -34,7 +34,7 @@
 >  >  
 >  >* 라운드 진행   
 >  >    1,2 round에서는 각 라운드에서의 결과와 관계없이 만점의 80% 이상을 획득해야 다음 라운드로 넘어간다.   
->  >    `ex) 1라운드: 총점 80점 이상, 2라운드: 총점 160점 이상`   
+>  >    *`ex) 1라운드: 총점 80점 이상, 2라운드: 총점 160점 이상`*   
 >  >    4라운드는 히든 라운드로 3라운드에서 모두 다 맞추면 4라운드로 넘어갈 수 있다.   
 >  >    조건을 넘기지 못하고 게임이 종료되면 순위가 나온다.
 
@@ -43,14 +43,14 @@
 > ### what's in my HitMole
 >  > <img src="https://github.com/idohae/HitMole/assets/152246147/cb526c88-7f14-4abe-bd7b-18671b82b468" width="40%" height="40%" alt="image"></img>
 >  >
->  > hitmole_pkg
->  >  > [hitmole_boards.py](#hitmole_boards)   
+>  > `hitmole_pkg`
+>  >  > [`hitmole_boards.py`](#hitmole_boards)   
 >  >  >    보드판을 띄우는 역할로, 두더지나 숫자, 문구를 아스키 아트로 출력하는 메소드들로 구성된 모듈이다.
 >  >  >
->  >  > [hitmole2.py](#hitmole2)   
+>  >  > [`hitmole2.py`](#hitmole2)   
 >  >  >    hitmole_boards 모듈을 이용하여 튜토리얼부터 끝까지 전반적인 진행 코드가 작성된 파일이다.
 >  >
->  > [main.py](#main)   
+>  > [`main.py`](#main)   
 >  >    게임의 시작과 함께 플레이어로부터 닉네임을 입력받고, hitmole2.py 의 게임 진행 메소드 [`play()`](#play) 를 호출한다.
 
 > ### how to start
@@ -70,7 +70,7 @@
 ---
 ## 3. codes
 `tutorial` → `1라운드` → `점수출력` → `판별` → `2라운드` → `점수` → `3라운드` → `점수` → `랭킹출력`
-> ## hitmole_boards[▲](#whats-in-my-hitmole)
+> ## `hitmole_boards`[▲](#whats-in-my-hitmole)
 > [`hitmole_board`](#hitmole_board)
 > [`tutorial_board`](#tutorial_board)
 > [`start_board`](#start_board)
@@ -85,7 +85,7 @@
 > 게임을 실행하는 os 가 Mac 또는 Linux 일 경우 아래에서 쓰이는 os.system() 함수에 넘겨주는 명령어를 `clear`로, Window 일 경우 `cls`로 한다.   
 > 보드판을 반복해서 출력하기 위해 터미널 화면을 초기화 하는 데 사용된다.
 > 
->  > ### hitmole_board()[▲](#hitmole_boards)
+>  > ### `hitmole_board()`[▲](#hitmole_boards)
 >  > 게임 시작 화면 출력 메소드
 >  > ```python
 >  > hitmole_board():
@@ -99,7 +99,7 @@
 >  > 터미널 코드 전적 지운 후 저장된 문자열인 게임명 출력, 읽을 수 있게 1.5초 유지   
 >  > 다음 화면으로 넘어가기 전 공백을 위한 print를 0.5초 유지
 >
->  > ### tutorial_board()[▲](#hitmole_boards)
+>  > ### `tutorial_board()`[▲](#hitmole_boards)
 >  > 튜토리얼 시작 화면 출력 메소드
 >  > ```python
 >  > tutorial_board(): 
@@ -109,7 +109,7 @@
 >  > ```
 >  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [`hitmole_board()`](#hitmole_board) 와 동일
 >
->  > ### start_board()[▲](#hitmole_boards)
+>  > ### `start_board()`[▲](#hitmole_boards)
 >  > 본 게임 시작 화면 출력 메소드
 >  > ```python
 >  > start_board():
@@ -132,7 +132,7 @@
 >  > → `NUMS` 리스트에서 해당 인덱스 범위의 숫자를 출력하기 위해 반복 루프(5번인 이유는 리스트에서 숫자 하나가 5열로 구성)   
 >  > → 숫자 출력 후 화면 정리를 위한 엔터 출력   
 > 
->  > ### print_board(pop)[▲](#hitmole_boards)
+>  > ### `print_board(pop)`[▲](#hitmole_boards)
 >  > 랜덤 두더지 아스키 아트 출력 메소드
 >  > ```python
 >  > pop = [0 0 0 0 0 1 0 0 0]
@@ -162,7 +162,7 @@
 >  > → 인덱스가 1인 경우 (즉, 해당 위치에 두더지가 나타난 경우) : __두더지__ 출력  
 >  > → 인덱스가 0인 경우 (즉, 해당 위치에 두더지가 나타나지 않은 경우) : __구멍__ 출력  
 >
->  > ### hit_board(pop)[▲](#hitmole_boards)
+>  > ### `hit_board(pop)`[▲](#hitmole_boards)
 >  > 맞아서 찌그러진 두더지 아스키 아트 출력 메소드
 >  > ```python
 >  > def hit_board(pop):  
@@ -179,6 +179,6 @@
 >  > 랜덤으로 숫자를 뽑아둔 pop_up을 받아 해당 인덱스만 찌그러진 두더지를 출력하고  
 >  > 나머지는 구멍을 출력하도록 한다.
 >  > 
-> ## hitmole2
+> ## `hitmole2`
 >
-> ## main
+> ## `main`
