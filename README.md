@@ -51,7 +51,7 @@
 >  >  >    hitmole_boards 모듈을 이용하여 튜토리얼부터 끝까지 전반적인 진행 코드가 작성된 파일이다.
 >  >
 >  > [main.py](#main)   
->  >    게임의 시작과 함께 플레이어로부터 닉네임을 입력받고, hitmole2.py 의 게임 진행 메소드 [play()](#play) 를 호출한다.
+>  >    게임의 시작과 함께 플레이어로부터 닉네임을 입력받고, hitmole2.py 의 게임 진행 메소드 [`play()`](#play) 를 호출한다.
 
 > ### how to start
 >  >* 사전 준비
@@ -107,7 +107,7 @@
 >  >     print(TUTORIAL)
 >  >     ...
 >  > ```
->  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [hitmole_board()](#hitmole_board) 와 동일
+>  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [`hitmole_board()`](#hitmole_board) 와 동일
 >
 >  > ### start_board()[▲](#hitmole_boards)
 >  > 본 게임 시작 화면 출력 메소드
@@ -173,7 +173,7 @@
 >  >                     print(HOLE[r], end='') 
 >  >         print()
 >  > ```
->  > 생략된 부분은 위의 [print_board()](#print_boardpop) 함수와 동일
+>  > 생략된 부분은 위의 [`print_board()`](#print_boardpop) 함수와 동일
 >  >
 >  > 사용자가 두더지를 잡은 경우에  
 >  > 랜덤으로 숫자를 뽑아둔 pop_up을 받아 해당 인덱스만 찌그러진 두더지를 출력하고  
