@@ -141,8 +141,8 @@
 >  > a s d   3 4 5  
 >  > z x c   6 7 8
 >  > ```
->  > 랜덤으로 두더지가 들어갈 인덱스만 1인 상태로 변수 pop을 넘겨받을 것.   
->  > pop에서의 인덱스와 매칭되는 키보드값은 위와 같음. 위에서의 두더지 인덱스는 `5`, 키보드 위치는 `d`에 해당
+>  > 랜덤으로 두더지가 들어갈 인덱스만 1인 상태로 변수 `pop`을 넘겨받을 것.   
+>  > `pop`에서의 인덱스와 매칭되는 키보드값은 위와 같음. 위에서의 두더지 인덱스는 `5`, 키보드 위치는 `d`에 해당
 >  > ```python
 >  > def print_board(pop):
 >  >     os.system("clear")
@@ -156,9 +156,9 @@
 >  >                     print(HOLE[r], end='')
 >  >             print()
 >  > ```
->  > 세로로 3개의 행을 나타내기 위한 반복 루프 → HOLE의 길이만큼 반복하는 루프 → 가로로 3개의 열을 나타내는 루프  
+>  > 세로로 3개의 행을 나타내기 위한 반복 루프 → `HOLE`의 길이만큼 반복하는 루프 → 가로로 3개의 열을 나타내는 루프  
 >  > 
->  > 현재의 행과 열을 기반으로 pop 리스트에서 가져올 인덱스를 계산  
+>  > 현재의 행과 열을 기반으로 `pop` 리스트에서 가져올 인덱스를 계산  
 >  > → 인덱스가 1인 경우 (즉, 해당 위치에 두더지가 나타난 경우) : __두더지__ 출력  
 >  > → 인덱스가 0인 경우 (즉, 해당 위치에 두더지가 나타나지 않은 경우) : __구멍__ 출력  
 >
@@ -176,9 +176,58 @@
 >  > 생략된 부분은 위의 [`print_board()`](#print_boardpop) 함수와 동일
 >  >
 >  > 사용자가 두더지를 잡은 경우에  
->  > 랜덤으로 숫자를 뽑아둔 pop_up을 받아 해당 인덱스만 찌그러진 두더지를 출력하고  
+>  > 랜덤으로 숫자를 뽑아둔 `pop`을 받아 해당 인덱스만 찌그러진 두더지를 출력하고  
 >  > 나머지는 구멍을 출력하도록 한다.
->  > 
-> ## `hitmole2`
+>  
+>  > ### `score_board(points)`[▲](#hitmole_boards)
+>  > 각 라운드가 끝날 때마다 모은 점수 출력 메소드  
+>  > ```python
+>  > def score_board(points):
+>  >     os.system("clear")
+>  >     points = str(points) 
+>  >     print('\n'*8) 
+>  >     for i in range(5): 
+>  >         print(SCORE[i],end='') 
+>  >         for n in range(len(points)): 
+>  >             index = int(points[n])*5 
+>  >             print(NUMS[i][index:index+5],end='') 
+>  >         print()
+>  >     print('\n'*10,end='')
+>  > ```
+>  > 점수를 나타내는 각 숫자의 행을 나타내는 반복 루프  
+>  > → `points`의 길이만큼 반복하는 루프 시작(이는 각 숫자를 나타냄)  
+>  > → 현재 숫자에 대한 인덱스를 계산 : 문자열 `points`에서 `n`번째 자리의 숫자를 가져오고, 가져온 숫자를 정수로 변환  
+>  > (숫자를 5배로 곱하는데, 이렇게 하는 이유는 각 숫자가 `NUMS` 리스트에서 5행으로 이루어져 있기 때문)
+> 
+>  > ### `round_board(round)`[▲](#hitmole_boards)
+>  > 플레이어가 일정 점수를 넘겨 다음 라운드로 진입할 경우 해당 라운드 출력 메소드  
+>  > ```python
+>  > def round_board(round):
+>  >     os.system("clear")
+>  >     print('\n'*8)
+>  >     for i in range(5):
+>  >         print(ROUND[i],end='')
+>  >         index = round*5
+>  >         print(NUMS[i][index:index+5],end='')
+>  >         print()
+>  >     print('\n'*10,end='')
+>  > ```
+>  > `round`는 현재 게임 라운드를 나타내는 변수  
+>  > `NUMS` 리스트에 있는 각 숫자는 5개의 행으로 이루어져 있으며,  
+>  > 따라서 현재 라운드에 해당하는 인덱스를 구하기 위해서는 `round`에 5를 곱해야 함.  
+> 
+>  > ### `over_board()`[▲](#hitmole_boards)
+>  > 게임 종료 화면 출력 메소드  
+>  > ```python
+>  > def over_board():
+>  >     for _ in range(3):
+>  >         os.system("clear")
+>  >         print(OVER)
+>  >         ...
+>  > ```
+>  > [`hitmole_board()`](#hitmole_board) 코드와 유사, 'GAME OVER' 텍스트를 세 번 깜박임.
 >
-> ## `main`
+> 
+> ## `hitmole2`[▲](#whats-in-my-hitmole)
+>
+> ## `main`[▲](#whats-in-my-hitmole)
