@@ -71,6 +71,11 @@
 ## 3. codes
 `tutorial` → `1라운드` → `점수출력` → `판별` → `2라운드` → `점수` → `3라운드` → `점수` → `랭킹출력`
 > ## hitmole_boards[▲](#whats-in-my-hitmole)
+> [`hitmole_board`](#hitmole_board())
+> [`tutorial_board`](#tutorial_board())
+> [`start_board`](#start_board())
+> [`print_board`](#print_board(pop))
+> [`hit_board`](#hit_board(pop))  
 > ```python
 > if os.name == "nt":
 >     eraser = "cls"
@@ -80,7 +85,7 @@
 > 게임을 실행하는 os 가 Mac 또는 Linux 일 경우 아래에서 쓰이는 os.system() 함수에 넘겨주는 명령어를 `clear`로, Window 일 경우 `cls`로 한다.   
 > 보드판을 반복해서 출력하기 위해 터미널 화면을 초기화 하는 데 사용된다.
 > 
->  > ### hitmole_board()
+>  > ### hitmole_board()[▲](#hitmole_boards)
 >  > 게임 시작 화면 출력 메소드
 >  > ```python
 >  > hitmole_board():
@@ -94,7 +99,7 @@
 >  > 터미널 코드 전적 지운 후 저장된 문자열인 게임명 출력, 읽을 수 있게 1.5초 유지   
 >  > 다음 화면으로 넘어가기 전 공백을 위한 print를 0.5초 유지
 >
->  > ### tutorial_board()
+>  > ### tutorial_board()[▲](#hitmole_boards)
 >  > 튜토리얼 시작 화면 출력 메소드
 >  > ```python
 >  > tutorial_board(): 
@@ -104,7 +109,7 @@
 >  > ```
 >  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [hitmole_board()](#hitmole_board) 와 동일
 >
->  > ### start_board()
+>  > ### start_board()[▲](#hitmole_boards)
 >  > 본 게임 시작 화면 출력 메소드
 >  > ```python
 >  > start_board():
@@ -127,7 +132,7 @@
 >  > → `NUMS` 리스트에서 해당 인덱스 범위의 숫자를 출력하기 위해 반복 루프(5번인 이유는 리스트에서 숫자 하나가 5열로 구성)   
 >  > → 숫자 출력 후 화면 정리를 위한 엔터 출력   
 > 
->  > ### print_board(pop)
+>  > ### print_board(pop)[▲](#hitmole_boards)
 >  > 랜덤 두더지 아스키 아트 출력 메소드
 >  > ```python
 >  > pop = [0 0 0 0 0 1 0 0 0]
@@ -157,7 +162,7 @@
 >  > → 인덱스가 1인 경우 (즉, 해당 위치에 두더지가 나타난 경우) : __두더지__ 출력  
 >  > → 인덱스가 0인 경우 (즉, 해당 위치에 두더지가 나타나지 않은 경우) : __구멍__ 출력  
 >
->  > ### hit_board(pop)
+>  > ### hit_board(pop)[▲](#hitmole_boards)
 >  > 맞아서 찌그러진 두더지 아스키 아트 출력 메소드
 >  > ```python
 >  > def hit_board(pop):  
@@ -168,7 +173,7 @@
 >  >                     print(HOLE[r], end='') 
 >  >         print()
 >  > ```
->  > 생략된 부분은 위의 [print_board](#print_boardpop) 함수와 동일
+>  > 생략된 부분은 위의 [print_board()](#print_boardpop) 함수와 동일
 >  >
 >  > 사용자가 두더지를 잡은 경우에  
 >  > 랜덤으로 숫자를 뽑아둔 pop_up을 받아 해당 인덱스만 찌그러진 두더지를 출력하고  
