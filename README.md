@@ -44,10 +44,10 @@
 >  > <img src="https://github.com/idohae/HitMole/assets/152246147/cb526c88-7f14-4abe-bd7b-18671b82b468" width="40%" height="40%" alt="image"></img>
 >  >
 >  > `hitmole_pkg`
->  >  > [`hitmole_boards.py`](#hitmole_boards)   
+>  >  > [`hitmole_boards.py`](#1hitmole_boards)   
 >  >  >    보드판을 띄우는 역할로, 두더지나 숫자, 문구를 아스키 아트로 출력하는 메소드들로 구성된 모듈이다.
 >  >  >
->  >  > [`hitmole2.py`](#hitmole2)   
+>  >  > [`hitmole2.py`](#2hitmole2)   
 >  >  >    hitmole_boards 모듈을 이용하여 튜토리얼부터 끝까지 전반적인 진행 코드가 작성된 파일이다.
 >  >
 >  > [`main.py`](#main)   
