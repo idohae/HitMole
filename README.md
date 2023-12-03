@@ -446,4 +446,31 @@
 >
 > 
 > ## `main`[▲](#whats-in-my-hitmole)
+> ```python
+> from hitmole_pkg.hitmole2 import *
+> import hitmole_pkg.hitmole_boards as boards
+> ```
+> 앞서 작성한 패키지 `hitmole_pkg`의 모듈 `hitmole2`에서 모든 메소드를 `import`하여 메소드 이름 그대로 쓸 수 있도록 한다.
+>
+> 같은 패키지의 `hitmole_boards` 모듈은 확실한 구분을 위해 `boards`라는 이름으로 불러온다.
+>
+> ```python
+> if __name__ == '__main__':
+>     boards.hitmole_board()
+>     while True:
+>         user = input('닉네임을 입력하세요(enter 시 게임 종료): ')
+>         try:
+>             if not user:
+>                 break
+>             elif len(user) > 6:
+>                 raise LengthError
+>             elif set(user)&set('abcdefghijklmnopqrstuvwxyz') != set(user):
+>                 raise AlphabetError
+>             HitMole().play(user)
+>         except Exception as e :
+>             print('Error raised:', e)
+> ```
+> 게임 시작 보드판을 `hitmole_board()` 메소드를 통해 출력한 후  
+> 반복문 안에서 플레이어에게 6자 이내의 영소문자 닉네임을 입력 받고 게임을 실행시킨다.
 > 
+> 입력칸에 엔터를 쳐서 입력값이 `None`일 경우 반복문을 나와 게임을 완전 종료한다.
