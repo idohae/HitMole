@@ -232,7 +232,11 @@
 >
 > 
 > ## `hitmole2`[▲](#whats-in-my-hitmole)
-> [`hitmole_board`](#hitmole_board)  
+> [`__init__`](#__init__self)
+> [`pop_up`](#pop_upselfmole=None)
+> [`wait_keyboard`](#wait_keyboardselftimeout=None)
+> [`tutorial`](#tutorialself)
+> [`play_round`](#play_roundself)  
 > ```python
 > rank = {}
 > ```
