@@ -71,11 +71,11 @@
 ## 3. codes
 `tutorial` → `1라운드` → `점수출력` → `판별` → `2라운드` → `점수` → `3라운드` → `점수` → `랭킹출력`
 > ## hitmole_boards[▲](#whats-in-my-hitmole)
-> [`hitmole_board`](#hitmole_board())
-> [`tutorial_board`](#tutorial_board())
-> [`start_board`](#start_board())
-> [`print_board`](#print_board(pop))
-> [`hit_board`](#hit_board(pop))  
+> [`hitmole_board`](#hitmole_board)
+> [`tutorial_board`](#tutorial_board)
+> [`start_board`](#start_board)
+> [`print_board`](#print_boardpop)
+> [`hit_board`](#hit_boardpop)  
 > ```python
 > if os.name == "nt":
 >     eraser = "cls"
