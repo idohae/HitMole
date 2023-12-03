@@ -233,8 +233,8 @@
 > 
 > ## `hitmole2`[▲](#whats-in-my-hitmole)
 > [`__init__`](#__init__self)
-> [`pop_up`](#pop_upself,mole=None)
-> [`wait_keyboard`](#wait_keyboardself,timeout=None)
+> [`pop_up`](#pop_upselfmoleNone)
+> [`wait_keyboard`](#wait_keyboardselftimeoutNone)
 > [`tutorial`](#tutorialself)
 > [`play_round`](#play_roundself)  
 > ```python
