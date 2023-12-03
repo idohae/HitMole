@@ -3,9 +3,9 @@
 ## **⋆ . 🎁˚🎄 ✦Game Developers.. 🧸⊹ ･ﾟ✧**
 > 이해정(Haejeong, Lee) <pouwuoq0815@pukyong.ac.kr>
 > 
-> 백서연
+> 백서연(baekseoyeon) <callmeseoyeon@naver.com>
 > 
-> 주효빈
+> 주효빈(juhyobin) <zns12201220@gmail.com>
 
 ---
 ## 1. game rule
