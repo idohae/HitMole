@@ -85,7 +85,7 @@
 ---
 ## 3. codes
 `tutorial` → `1라운드` → `점수출력` → `판별` → `2라운드` → `점수` → `3라운드` → `점수` → `랭킹출력`
-> ## hitmole_boards[▲](#hitmole_pkg)
+> ## hitmole_boards[▲](#whats-in-my-hitmole)
 > 
 > ```python
 > if os.name == "nt":
