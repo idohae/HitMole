@@ -98,7 +98,7 @@
 >  > 
 >  > 보드판을 반복해서 출력하기 위해 터미널 화면을 초기화 하는 데 사용된다.
 >  > 
->  > #### hitmole board
+>  > ### hitmole board
 >  >
 >  > ```python
 >  > hitmole_board():
@@ -114,7 +114,7 @@
 >  > 
 >  > 다음 화면으로 넘어가기 전 공백을 위한 print를 0.5초 유지
 >
->  > #### tutorial board
+>  > ### tutorial board
 >  >
 >  > ```python
 >  > tutorial_board(): 
@@ -125,7 +125,7 @@
 >  >
 >  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [hitmole_board()](#hitmole-board) 와 동일
 >
->  > #### start board
+>  > ### start board
 >  >
 >  > ```python
 >  > start_board():
