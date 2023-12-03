@@ -88,7 +88,7 @@
 > 게임을 실행하는 os 가 Mac 또는 Linux 일 경우 아래에서 쓰이는 os.system() 함수에 넘겨주는 명령어를 `clear`로, Window 일 경우 `cls`로 한다.   
 > 보드판을 반복해서 출력하기 위해 터미널 화면을 초기화 하는 데 사용된다.
 > 
->  > ### `hitmole_board()`[▲](#hitmole_boards)
+>  > ### `hitmole_board()`[▲](#1hitmole_boards)
 >  > 게임 시작 화면 출력 메소드
 >  > ```python
 >  > hitmole_board():
@@ -102,7 +102,7 @@
 >  > 터미널 코드 전적 지운 후 저장된 문자열인 게임명 출력, 읽을 수 있게 1.5초 유지   
 >  > 다음 화면으로 넘어가기 전 공백을 위한 print를 0.5초 유지
 >
->  > ### `tutorial_board()`[▲](#hitmole_boards)
+>  > ### `tutorial_board()`[▲](#1hitmole_boards)
 >  > 튜토리얼 시작 화면 출력 메소드
 >  > ```python
 >  > tutorial_board(): 
@@ -112,7 +112,7 @@
 >  > ```
 >  > 프린트 하는 문자만 다를 뿐 나머지 코드는 [`hitmole_board()`](#hitmole_board) 와 동일
 >
->  > ### `start_board()`[▲](#hitmole_boards)
+>  > ### `start_board()`[▲](#1hitmole_boards)
 >  > 본 게임 시작 화면 출력 메소드
 >  > ```python
 >  > start_board():
@@ -135,7 +135,7 @@
 >  > → `NUMS` 리스트에서 해당 인덱스 범위의 숫자를 출력하기 위해 반복 루프(5번인 이유는 리스트에서 숫자 하나가 5열로 구성)   
 >  > → 숫자 출력 후 화면 정리를 위한 엔터 출력   
 > 
->  > ### `print_board(pop)`[▲](#hitmole_boards)
+>  > ### `print_board(pop)`[▲](#1hitmole_boards)
 >  > 랜덤 두더지 아스키 아트 출력 메소드
 >  > ```python
 >  > pop = [0 0 0 0 0 1 0 0 0]
@@ -165,7 +165,7 @@
 >  > → 인덱스가 1인 경우 (즉, 해당 위치에 두더지가 나타난 경우) : __두더지__ 출력  
 >  > → 인덱스가 0인 경우 (즉, 해당 위치에 두더지가 나타나지 않은 경우) : __구멍__ 출력  
 >
->  > ### `hit_board(pop)`[▲](#hitmole_boards)
+>  > ### `hit_board(pop)`[▲](#1hitmole_boards)
 >  > 맞아서 찌그러진 두더지 아스키 아트 출력 메소드
 >  > ```python
 >  > def hit_board(pop):  
@@ -182,7 +182,7 @@
 >  > 랜덤으로 숫자를 뽑아둔 `pop`을 받아 해당 인덱스만 찌그러진 두더지를 출력하고  
 >  > 나머지는 구멍을 출력하도록 한다.
 >  
->  > ### `score_board(points)`[▲](#hitmole_boards)
+>  > ### `score_board(points)`[▲](#1hitmole_boards)
 >  > 각 라운드가 끝날 때마다 모은 점수 출력 메소드  
 >  > ```python
 >  > def score_board(points):
@@ -202,7 +202,7 @@
 >  > → 현재 숫자에 대한 인덱스를 계산 : 문자열 `points`에서 `n`번째 자리의 숫자를 가져오고, 가져온 숫자를 정수로 변환  
 >  > (숫자를 5배로 곱하는데, 이렇게 하는 이유는 각 숫자가 `NUMS` 리스트에서 5행으로 이루어져 있기 때문)
 > 
->  > ### `round_board(round)`[▲](#hitmole_boards)
+>  > ### `round_board(round)`[▲](#1hitmole_boards)
 >  > 플레이어가 일정 점수를 넘겨 다음 라운드로 진입할 경우 해당 라운드 출력 메소드  
 >  > ```python
 >  > def round_board(round):
@@ -219,7 +219,7 @@
 >  > `NUMS` 리스트에 있는 각 숫자는 5개의 행으로 이루어져 있으며,  
 >  > 따라서 현재 라운드에 해당하는 인덱스를 구하기 위해서는 `round`에 5를 곱해야 함.  
 > 
->  > ### `over_board()`[▲](#hitmole_boards)
+>  > ### `over_board()`[▲](#1hitmole_boards)
 >  > 게임 종료 화면 출력 메소드  
 >  > ```python
 >  > def over_board():
@@ -243,7 +243,7 @@
 > ```
 > 플레이어의 점수에 따른 순위를 저장하는 클래스 속성
 > 
->  > ### `__init__(self)`[▲](#hitmole2)
+>  > ### `__init__(self)`[▲](#2hitmole2)
 >  > ```python
 >  > def __init__(self):
 >  >     self.points = 0
@@ -252,7 +252,7 @@
 >  > ```
 >  > 점수 카운팅, 플레이어 입력키를 판별, 게임 라운드 진행을 저장하는 인스턴스 속성
 > 
->  > ### `pop_up(self,mole=None)`[▲](#hitmole2)
+>  > ### `pop_up(self,mole=None)`[▲](#2hitmole2)
 >  > 0부터 8까지의 숫자 중 하나를 뽑아 그 수만 1이고 나머지는 0인 일차원 숫자 행렬 반환 메소드  
 >  > ```python
 >  > def pop_up(self,mole=None):
@@ -269,7 +269,7 @@
 >  >
 >  > - 최종적으로 업데이트된 holes 배열을 반환 → 이 배열은 두더지가 나온 구멍은 1로, 그 외의 구멍은 0으로 표시된 배열.
 >  
->  > ### `wait_keyboard(self,timeout=None)`[▲](#hitmole2)
+>  > ### `wait_keyboard(self,timeout=None)`[▲](#2hitmole2)
 >  > 플레이어로부터 키보드 값을 입력받는 메소드  
 >  > ```python
 >  > def wait_keyboard(self, timeout=None):
@@ -317,7 +317,7 @@
 >  >   타이머가 만료되면 `listener.stop`을 호출하여 키보드 리스너를 종료  
 >  >   키보드 입력을 계속해서 기다리는데 플레이어가 특정 키를 누를 때까지 기다리며, 타임아웃이 설정된 경우 타이머가 만료되면 종료
 >  
->  > ### `tutorial(self)`[▲](#hitmole2)
+>  > ### `tutorial(self)`[▲](#2hitmole2)
 >  > 랜덤으로 나타난 두더지가 플레이어가 올바른 키를 입력할 때까지 사라지지 않고, 튜토리얼을 멈추고 게임을 시작하고 싶으면 스페이스바를 누르도록 안내하는 튜토리얼 메소드  
 >  > ```python
 >  > def tutorial(self):
@@ -376,7 +376,7 @@
 >  > - 만약 두더지를 맞췄다면 내부 무한 루프를 탈출하여 다음 두더지의 나타남을 처리  
 >  >   만약 `start_game`이 `True`라면 외부 무한 루프를 탈출하여 게임을 시작
 >  
->  > ### `play_round(self)`[▲](#hitmole2)
+>  > ### `play_round(self)`[▲](#2hitmole2)
 >  > 튜토리얼이 종료된 후 진행하는 본 게임에서 각 라운드에 해당하는 메소드  
 >  > ```python
 >  > def play_round(self):
@@ -412,7 +412,7 @@
 >  >
 >  > 두더지가 나타난 구멍을 다시 초기화하여 숨김 상태로 만듦, 두더지가 사라진 상태의 게임 보드를 출력 후 유지
 >  
->  > ### `play(self,user)`[▲](#hitmole2)
+>  > ### `play(self,user)`[▲](#2hitmole2)
 >  > 전체 게임 진행 메소드  
 >  > ```python
 >  > def play(self, user):
