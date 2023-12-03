@@ -50,16 +50,16 @@
 > ### what's in my HitMole
 >  > <img src="https://github.com/idohae/HitMole/assets/152246147/cb526c88-7f14-4abe-bd7b-18671b82b468" width="40%" height="40%" alt="image"></img>
 >  >
->  >* hitmole_pkg
->  >  >* [hitmole_boards.py](#hitmole_boards)
+>  > hitmole_pkg
+>  >  > [hitmole_boards.py](#hitmole_boards)
 >  >  >
 >  >  >    보드판을 띄우는 역할로, 두더지나 숫자, 문구를 아스키 아트로 출력하는 메소드들로 구성된 모듈이다.
 >  >  >
->  >  >* [hitmole2.py](#hitmole2)
+>  >  > [hitmole2.py](#hitmole2)
 >  >  >
 >  >  >    hitmole_boards 모듈을 이용하여 튜토리얼부터 끝까지 전반적인 진행 코드가 작성된 파일이다.
 >  >
->  >* [main.py](#main)
+>  > [main.py](#main)
 >  >
 >  >    게임의 시작과 함께 플레이어로부터 닉네임을 입력받고, hitmole2.py 의 게임 진행 메소드 play 를 호출한다.
 
