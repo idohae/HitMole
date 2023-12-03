@@ -371,7 +371,7 @@
 >  >   `self.click` = "wrong key"인 경우가 있기 때문에 리스트 인덱싱 오류를 피해야 함
 >  >
 >  > - 입력한 키의 구멍에 두더지가 있다면(`self.holes[key]`가 1이라면)  
->  >   → [`boards.hit_board(pop)`](#hit_board)를 호출하여 두더지가 맞았다는 화면 출력, `hit` 변수를 `True`로 설정
+>  >   → [`boards.hit_board(pop)`](#hit_boardpop)를 호출하여 두더지가 맞았다는 화면 출력, `hit` 변수를 `True`로 설정
 >  >
 >  > - 만약 두더지를 맞췄다면 내부 무한 루프를 탈출하여 다음 두더지의 나타남을 처리  
 >  >   만약 `start_game`이 `True`라면 외부 무한 루프를 탈출하여 게임을 시작
