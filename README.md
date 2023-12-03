@@ -70,7 +70,7 @@
 ---
 ## 3. codes
 `tutorial` → `1라운드` → `점수출력` → `판별` → `2라운드` → `점수` → `3라운드` → `점수` → `랭킹출력`
-> ## `hitmole_boards`[▲](#whats-in-my-hitmole)
+> ## 1)`hitmole_boards`[▲](#whats-in-my-hitmole)
 > [`hitmole_board`](#hitmole_board)
 > [`tutorial_board`](#tutorial_board)
 > [`start_board`](#start_board)
@@ -178,7 +178,7 @@
 >  > ```
 >  > 생략된 부분은 위의 [`print_board()`](#print_boardpop) 함수와 동일
 >  >
->  > 사용자가 두더지를 잡은 경우에  
+>  > 플레이어가 두더지를 잡은 경우에  
 >  > 랜덤으로 숫자를 뽑아둔 `pop`을 받아 해당 인덱스만 찌그러진 두더지를 출력하고  
 >  > 나머지는 구멍을 출력하도록 한다.
 >  
@@ -231,12 +231,13 @@
 >  > [`hitmole_board()`](#hitmole_board) 코드와 유사, 'GAME OVER' 텍스트를 세 번 깜박임.
 >
 > 
-> ## `hitmole2`[▲](#whats-in-my-hitmole)
+> ## 2)`hitmole2`[▲](#whats-in-my-hitmole)
 > [`__init__`](#__init__self)
 > [`pop_up`](#pop_upselfmoleNone)
 > [`wait_keyboard`](#wait_keyboardselftimeoutNone)
 > [`tutorial`](#tutorialself)
-> [`play_round`](#play_roundself)  
+> [`play_round`](#play_roundself)
+> [`play`](#playselfuser)  
 > ```python
 > rank = {}
 > ```
@@ -249,7 +250,7 @@
 >  >     self.click = None
 >  >     self.cnt_round = 1
 >  > ```
->  > 점수 카운팅, 사용자 입력키를 판별, 게임 라운드 진행을 저장하는 인스턴스 속성
+>  > 점수 카운팅, 플레이어 입력키를 판별, 게임 라운드 진행을 저장하는 인스턴스 속성
 > 
 >  > ### `pop_up(self,mole=None)`[▲](#hitmole2)
 >  > 0부터 8까지의 숫자 중 하나를 뽑아 그 수만 1이고 나머지는 0인 일차원 숫자 행렬 반환 메소드  
@@ -262,14 +263,14 @@
 >  > - `mole` 매개변수는 두더지가 나올 구멍의 인덱스를 나타냄  
 >  >   이 매개변수는 기본값으로 `None`을 가지고 있으며, 호출 시 구멍의 인덱스를 제공하지 않으면 `None`으로 설정
 >  >
->  > - `holes`라는 인스턴스 속성을 만들어 0으로 초기화된 길이가 9인 numpy 배열로 설정하며, 이 배열은 두더지가 나올 구멍을 나타내는데 사용  
+>  > - `holes`라는 인스턴스 속성을 만들어 0으로 초기화된 길이가 9인 numpy 배열로 설정하며, 이 배열은 두더지가 나올 구멍을 나타내는데 사용  
 >  >   `mole`이 `None`이 아닌 경우: 해당 인덱스의 원소를 1로 설정하며, 이것이 두더지가 나올 구멍이 된다  
 >  >   `mole`이 `None`인 경우: 모든 원소가 0인 상태로 유지 → 모든 두더지가 숨은 상태
 >  >
 >  > - 최종적으로 업데이트된 holes 배열을 반환 → 이 배열은 두더지가 나온 구멍은 1로, 그 외의 구멍은 0으로 표시된 배열.
 >  
 >  > ### `wait_keyboard(self,timeout=None)`[▲](#hitmole2)
->  > 사용자로부터 키보드 값을 입력받는 메소드  
+>  > 플레이어로부터 키보드 값을 입력받는 메소드  
 >  > ```python
 >  > def wait_keyboard(self, timeout=None):
 >  >     def on_press(key):
@@ -314,10 +315,10 @@
 >  >   타임아웃이 설정되어 있다면 입력을 기다리는 동안에 타이머를 시작
 >  >
 >  >   타이머가 만료되면 `listener.stop`을 호출하여 키보드 리스너를 종료  
->  >   키보드 입력을 계속해서 기다리는데 사용자가 특정 키를 누를 때까지 기다리며, 타임아웃이 설정된 경우 타이머가 만료되면 종료
+>  >   키보드 입력을 계속해서 기다리는데 플레이어가 특정 키를 누를 때까지 기다리며, 타임아웃이 설정된 경우 타이머가 만료되면 종료
 >  
 >  > ### `tutorial(self)`[▲](#hitmole2)
->  > 랜덤으로 나타난 두더지가 사용자가 올바른 키를 입력할 때까지 사라지지 않고, 튜토리얼을 멈추고 게임을 시작하고 싶으면 스페이스바를 누르도록 안내하는 튜토리얼 메소드  
+>  > 랜덤으로 나타난 두더지가 플레이어가 올바른 키를 입력할 때까지 사라지지 않고, 튜토리얼을 멈추고 게임을 시작하고 싶으면 스페이스바를 누르도록 안내하는 튜토리얼 메소드  
 >  > ```python
 >  > def tutorial(self):
 >  >     boards.tutorial_board()
@@ -366,7 +367,7 @@
 >  > - `pop_up` 메소드를 호출하여 두더지가 나타난 구멍을 나타내는 배열을 얻음  
 >  >   : 현재 보드 출력하여 `pop` 배열은 어떤 구멍에 두더지가 나타났는지 나타낼 수 있음
 >  >
->  > - 사용자가 스페이스바를 누르면, 게임을 시작하는 신호로 `start_game`을 `True`로 설정하고 두 번째 무한 루프를 탈출  
+>  > - 플레이어가 스페이스바를 누르면, 게임을 시작하는 신호로 `start_game`을 `True`로 설정하고 두 번째 무한 루프를 탈출  
 >  >   `self.click` = "wrong key"인 경우가 있기 때문에 리스트 인덱싱 오류를 피해야 함
 >  >
 >  > - 입력한 키의 구멍에 두더지가 있다면(`self.holes[key]`가 1이라면)  
@@ -376,8 +377,8 @@
 >  >   만약 `start_game`이 `True`라면 외부 무한 루프를 탈출하여 게임을 시작
 >  
 >  > ### `play_round(self)`[▲](#hitmole2)
->  > 튜토리얼이 종료된 후 진행하는 본 게임 메소드
->  > ```
+>  > 튜토리얼이 종료된 후 진행하는 본 게임에서 각 라운드에 해당하는 메소드  
+>  > ```python
 >  > def play_round(self):
 >  >     for _ in range(10):
 >  >         mole = rd.choice(range(9))
@@ -405,11 +406,44 @@
 >  > 각 라운드에서는 10번의 시도가 주어지고, 두더지가 랜덤으로 10번 나타남.  
 >  > 레벨에 따라 두더지가 나타나는 시간을 결정: 레벨이 높아질수록 두더지가 나타나는 시간이 짧아짐
 >  >
->  > wait_keyboard 메서드를 호출하여 사용자로부터 키보드 입력을 받음  
->  > → 사용자가 입력한 키에 해당하는 구멍에 두더지가 있다면, 사용자의 점수를 10점 증가시키고 두더지가 맞았음을 나타내는 화면을 출력  
->  > → try 에서 예외가 발생하면, 두더지가 나타나는 시간이 더 길어지도록 설정
+>  > `wait_keyboard` 메소드를 호출하여 플레이어로부터 키보드 입력을 받음  
+>  > → 플레이어가 입력한 키에 해당하는 구멍에 두더지가 있다면, 플레이어의 점수를 10점 증가시키고 두더지가 맞았음을 나타내는 화면을 출력  
+>  > → `try` 에서 예외가 발생하면, 두더지가 나타나는 시간이 더 길어지도록 설정
 >  >
 >  > 두더지가 나타난 구멍을 다시 초기화하여 숨김 상태로 만듦, 두더지가 사라진 상태의 게임 보드를 출력 후 유지
->  > 
+>  
+>  > ### `play(self,user)`[▲](#hitmole2)
+>  > 전체 게임 진행 메소드  
+>  > ```python
+>  > def play(self, user):
+>  >     self.tutorial()
+>  >     boards.start_board()
+>  >     while True:
+>  >         self.play_round()
+>  >         boards.score_board(self.points)
+>  >         time.sleep(2.0)
+>  >         self.cnt_round += 1
+>  >         if (self.points != 100*(self.cnt_round-1)) and ((self.points < 100*(self.cnt_round-1)*0.8) or (self.cnt_round > 3)):
+>  >             boards.over_board()
+>  >             break
+>  >         boards.round_board(self.cnt_round)
+>  >         time.sleep(1.0)
+>  >     if (user not in HitMole.rank) or (HitMole.rank[user] < self.points):
+>  >         HitMole.rank[user] = self.points
+>  >     HitMole.rank = dict(sorted(HitMole.rank.items(), key=lambda x:x[1], reverse=True))
+>  >     rank=1
+>  >     for name,score in HitMole.rank.items():
+>  >         print('', rank, name + ':', score, sep='\t')
+>  >         print()
+>  >         rank+=1
+>  >     time.sleep(1.0)
+>  > ```
+>  > 튜토리얼 진행 후 `play_round` 메소드를 호출하여 한 라운드 플레이  
+>  > → 현재까지의 점수 출력 화면 보여줌(2초 동안 대기하여 점수를 확인할 시간), 라운드 수 +1  
+>  > → 현재 라운드에서의 점수를 판별하여 게임을 계속 진행할지를 결정  
+>  >     (플레이어의 점수가 해당 라운드의 최대 가능 점수의 80% 미만이거나, 라운드 횟수가 3보다 큰 경우에는 종료 화면 후 루프 탈출)  
+>  > → 게임 보드 출력, 현재 라운드 번호(`self.cnt_round`)에 해당하는 화면을 출력 → 현재 플레이어의 점수를 랭킹에 내림차순 저장
 >
+> 
 > ## `main`[▲](#whats-in-my-hitmole)
+> 
