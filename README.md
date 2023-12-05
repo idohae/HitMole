@@ -59,6 +59,10 @@
 >  >       pip install module_name
 >  >
 >  >    `pynput, numpy, os-sys` 등의 외부 모듈이 필요하기에 없을 시 명령창에 위 코드를 입력하여 설치한다.
+>  >  
+>  >       git clone https://github.com/idohae/HitMole.git
+>  >  
+>  >    위 명령어를 명령창에 입력하여 HitMole 파일을 원하는 환경에 다운 받는다.
 >  >
 >  >* 게임 실행
 >  >
